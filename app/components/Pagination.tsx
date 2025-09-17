@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 type PaginationProps = {
   totalPages: number;
   currentPage: number;
@@ -16,10 +17,10 @@ export default function Pagination({
         <button
           key={idx + 1}
           onClick={() => setCurrentPage(idx + 1)}
-          className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-sm font-medium text-gray-200 transition-colors duration-200 ${
+          className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-sm font-medium text-gray-200 transition-colors duration-200 active:scale-95 ${
             currentPage === idx + 1
-              ? "bg-blue-600 hover:bg-blue-700 active:scale-95"
-              : "bg-gray-700 hover:bg-gray-600 active:scale-95"
+              ? "bg-blue-600 hover:bg-blue-700"
+              : "bg-gray-700 hover:bg-gray-600"
           }`}
         >
           {idx + 1}

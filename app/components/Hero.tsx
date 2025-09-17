@@ -1,9 +1,13 @@
 import { Link } from "react-router";
+type Heroprops = {
+  name?: string;
+  description?: string;
+};
 
 export default function Hero({
   name = "[NAME]",
   description = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius veritatis officiis nisi, eaque nostrum repudiandae aliquam harum explicabo nobis?",
-}) {
+}: Heroprops) {
   return (
     <header className="rounded-lg bg-gray-900 px-6 py-20 text-center shadow-lg">
       <h2 className="mb-4 text-2xl font-medium">hey I'm {name} 👋</h2>

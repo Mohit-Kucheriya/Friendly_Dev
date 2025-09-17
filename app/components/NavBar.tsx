@@ -5,16 +5,16 @@ import { FaLaptopCode, FaBars, FaTimes } from "react-icons/fa";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const activeStyle = "text-blue-500 font-medium";
+  const activeStyle = "text-blue-600 font-semibold";
   const baseStyle =
-    " transition-colors duration-200 hover:text-blue-500 inline-block min-w-[70px] text-center";
+    " transition-colors duration-200 hover:text-blue-600 inline-block min-w-[70px] text-center";
 
   return (
     <nav className={`sticky top-0 z-50 bg-gray-800 text-gray-300 shadow-lg`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6">
-        <NavLink to="/" className="flex items-center gap-4 text-blue-500">
+        <NavLink to="/" className="flex items-center gap-4 text-blue-600">
           <FaLaptopCode className="text-2xl" />
-          <span className="text-xl font-medium">Friendly Dev</span>
+          <span className="text-xl font-semibold">Friendly Dev</span>
         </NavLink>
 
         {/* Desktop Nav */}

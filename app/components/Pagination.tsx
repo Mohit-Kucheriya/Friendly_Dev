@@ -1,4 +1,3 @@
-import Button from "../components/Button";
 type PaginationProps = {
   totalPages: number;
   currentPage: number;

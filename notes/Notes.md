@@ -40,3 +40,10 @@ export default [
           e. React Router passes that data into 'ProjectPage' as 'loaderData'.
 
           f. You display it in your UI.
+
+**Loaders**
+
+1. Used to fetch data for a route.
+
+2. Loaders are functions that return a promise.
+

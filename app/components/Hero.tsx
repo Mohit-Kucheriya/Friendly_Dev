@@ -6,7 +6,7 @@ type Heroprops = {
 
 export default function Hero({
   name = "[NAME]",
-  description = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius veritatis officiis nisi, eaque nostrum repudiandae aliquam harum explicabo nobis?",
+  description = " I’m a passionate frontend developer focused on crafting clean, responsive, and user-friendly web experiences. Currently diving deep into React and modern UI frameworks.",
 }: Heroprops) {
   return (
     <header className="rounded-lg bg-gray-900 px-6 py-20 text-center shadow-lg">

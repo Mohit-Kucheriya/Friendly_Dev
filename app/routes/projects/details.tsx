@@ -7,7 +7,9 @@ export async function clientLoader({
   request,
   params,
 }: Route.ClientLoaderArgs): Promise<Project> {
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/projects/${params.id}`);
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/projects/${params.id}`,
+  );
   if (!res.ok)
     throw new Response(`Project not found with id ${params.id} `, {
       status: 404,
@@ -28,7 +30,7 @@ export default function ProjectDetails({ loaderData }: Route.ComponentProps) {
     <>
       <Link
         to="/projects"
-        className="mb-8 flex items-center transition-colors duration-200 hover:text-blue-600"
+        className="mb-8 flex items-center text-blue-600 transition-colors duration-200 hover:text-blue-700"
       >
         <TiArrowBackOutline className="mr-2 text-lg" /> Back to Projects
       </Link>

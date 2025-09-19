@@ -46,9 +46,7 @@ export default function ProjectDetails({ loaderData }: Route.ComponentProps) {
           <div className="mb-6 flex items-center gap-4 font-medium text-gray-400">
             <span className="italic">{project.category}</span>
             <span>•</span>
-            <span className="">
-              {new Date(project.date).toLocaleDateString()}
-            </span>
+            <span className="">{new Date(project.date).toDateString()}</span>
           </div>
           <div className="flex items-center">
             <a
@@ -56,8 +54,7 @@ export default function ProjectDetails({ loaderData }: Route.ComponentProps) {
               className="flex items-center rounded-lg bg-blue-600 px-4 py-2 transition-colors duration-200 ease-in hover:bg-blue-700 focus:outline-none"
               target="_blank"
             >
-              View Live{" "}
-              <TiArrowForwardOutline className="ml-2 inline-block text-lg" />
+              View Live <TiArrowForwardOutline className="ml-2 text-lg" />
             </a>
           </div>
         </div>

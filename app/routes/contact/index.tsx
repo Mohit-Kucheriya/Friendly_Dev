@@ -2,6 +2,14 @@ import type { Route } from "./+types/index";
 import { Form } from "react-router";
 import Input from "~/components/Input";
 
+type ActionData =
+  | { errors: Record<string, string> }
+  | ({ submitMessage: string } & Record<string, string>);
+
+type ContactPageProps = {
+  actionData?: ActionData;
+};
+
 export async function action({ request }: Route.ActionArgs) {
   const formData = await request.formData();
   const data = Object.fromEntries(formData) as { [key: string]: string };
@@ -24,19 +32,21 @@ export async function action({ request }: Route.ActionArgs) {
   return { submitMessage: "Form submitted successfully", ...data };
 }
 
-export default function ContactPage({ actionData }: Route.ComponentProps) {
-  const { errors } = actionData || {};
-  console.log(actionData);
+export default function ContactPage({ actionData }: ContactPageProps) {
+  const errors =
+    actionData && "errors" in actionData
+      ? (actionData.errors as Record<string, string>)
+      : undefined;
 
   return (
     <div className="mx-auto max-w-xl rounded-lg bg-gray-900 px-6 py-12 shadow-lg">
-      <h2 className="mb-8 text-2xl font-medium">Contact Me</h2>
+      <h2 className="mb-8 text-2xl font-medium">📩 Contact Me</h2>
 
-      {actionData?.submitMessage ? (
+      {actionData && "submitMessage" in actionData && (
         <div className="mb-6 rounded-lg bg-green-600 px-4 py-2 text-center shadow-lg">
           <p className="text-sm text-green-100">{actionData.submitMessage}</p>
         </div>
-      ) : null}
+      )}
 
       <Form className="space-y-6" method="POST">
         <Input name="name" label="Full Name" type="text" error={errors?.name} />

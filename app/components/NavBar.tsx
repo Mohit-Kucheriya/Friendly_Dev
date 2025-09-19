@@ -12,7 +12,10 @@ export default function NavBar() {
   return (
     <nav className={`sticky top-0 z-50 bg-gray-800 text-gray-300 shadow-lg`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6">
-        <NavLink to="/" className="flex items-center gap-4 text-blue-600">
+        <NavLink
+          to="/"
+          className="flex items-center gap-4 text-blue-600 focus:outline-none"
+        >
           <FaLaptopCode className="text-2xl" />
           <span className="text-xl font-semibold">Friendly Dev</span>
         </NavLink>

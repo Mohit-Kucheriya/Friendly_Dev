@@ -49,7 +49,7 @@ export default function ProjectPage({ loaderData }: Route.ComponentProps) {
 
   return (
     <>
-      <h2 className="mb-8 text-2xl font-medium">Projects </h2>
+      <h2 className="mb-8 text-2xl font-medium">🚀 Projects </h2>
 
       {/* Category buttons  */}
       <div className="mb-8 flex flex-wrap gap-2.5">

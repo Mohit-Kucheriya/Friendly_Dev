@@ -19,8 +19,7 @@ export default function AboutPreview() {
           to="/about"
           className="flex items-center text-blue-600 transition-colors duration-200 hover:text-blue-700"
         >
-          Learn more{" "}
-          <TiArrowForwardOutline className="ml-2 inline-block text-lg" />
+          Learn more <TiArrowForwardOutline className="ml-2 text-lg" />
         </Link>
       </div>
     </section>
